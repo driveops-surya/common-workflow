@@ -1,4 +1,4 @@
-name: 'S3 Upload Action'
+name: 'S3 Upload Action surya'
 description: 'Upload files or directories to AWS S3 bucket with sync capabilities'
 
 # REQUIRED for Marketplace
