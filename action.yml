@@ -1,0 +1,36 @@
+name: 'S3 Upload Action'
+description: 'Upload files or directories to AWS S3 bucket with sync capabilities'
+
+# REQUIRED for Marketplace
+author: 'Your Name or Organization'
+
+# REQUIRED for Marketplace
+branding:
+  icon: 'upload-cloud'    # Choose from GitHub's Feather icons
+  color: 'blue'           # blue, green, yellow, orange, red, purple, gray
+
+# Clear inputs with descriptions
+inputs:
+  aws-access-key-id:
+    description: 'AWS Access Key ID for authentication'
+    required: true
+  aws-secret-access-key:
+    description: 'AWS Secret Access Key for authentication'
+    required: true
+  s3-bucket:
+    description: 'Name of the S3 bucket to upload to'
+    required: true
+    # ... other inputs
+
+# Add outputs if applicable
+outputs:
+  upload-url:
+    description: 'Public URL of the uploaded content'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: first step
+      bash: shell
+      run: | 
+        pwd
